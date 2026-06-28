@@ -57,7 +57,7 @@ function TaskCard({ task, deleteTask, setEditingTask }) {
         </span>
 
         {isOverdue && (
-          <span className="px-2 py-1 rounded-full bg-red-100 text-red-600 text-xs font-semibold">
+          <span className="px-3 py-1 rounded-full bg-red-100 text-red-600 text-sm font-semibold">
             Overdue
           </span>
         )}

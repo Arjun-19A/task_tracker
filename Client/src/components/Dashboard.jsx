@@ -12,7 +12,7 @@ function Dashboard({ tasks }) {
   const completed = tasks.filter((task) => task.status === "Completed").length;
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-2">
       <div className="bg-[#141545] rounded-xl shadow p-5 flex items-center justify-between">
         <div>
           <h3 className="text-[#68788F]">Total Tasks</h3>

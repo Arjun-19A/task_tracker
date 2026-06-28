@@ -6,9 +6,6 @@ const taskRouter = require("./Routes/taskRouter");
 const connectToDB = require("./config/db");
 
 dotenv.config();
-
-connectToDB();
-
 const app = express();
 
 app.use(cors());
@@ -22,6 +19,15 @@ app.use("/api/tasks", taskRouter);
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port http://localhost:${PORT}`);
-});
+const startServer = async () => {
+  try {
+    await connectToDB();
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+startServer();

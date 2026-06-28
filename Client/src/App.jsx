@@ -120,10 +120,10 @@ function App() {
       <main className="flex-1 lg:px-10 md:px-8">
         <TopNavbar search={search} setSearch={setSearch} />
 
-        <div className="p-6 lg:px-8 lg:mx-8 md:px-10">
+        <div className="p-4 lg:px-8 lg:mx-8 md:px-10">
           <Dashboard tasks={tasks} />
 
-          <div className="grid lg:grid-cols-3 gap-6 mt-6 md:px-6">
+          <div className="grid lg:grid-cols-3 gap-6 mt-4 md:px-6">
             <TaskForm
               addTask={addTask}
               editingTask={editingTask}

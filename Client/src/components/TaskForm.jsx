@@ -61,13 +61,13 @@ function TaskForm({ addTask, editingTask, updateTask }) {
 
   return (
     <div
-      className={`bg-white p-6 rounded-xl shadow transition-colors duration-300 h-fit  ${
+      className={`bg-white px-6 py-4 rounded-xl shadow transition-colors duration-300 h-fit  ${
         editingTask
           ? "border-2 border-blue-500 shadow-blue-200"
           : "border border-gray-200"
       }`}
     >
-      <h2 className="text-2xl font-bold mb-5">
+      <h2 className="text-2xl font-bold mb-3">
         {editingTask ? "Update Task" : "Add New Task"}
       </h2>
 
@@ -91,7 +91,7 @@ function TaskForm({ addTask, editingTask, updateTask }) {
         <textarea
           name="description"
           placeholder="Briefly describe your task"
-          rows="5"
+          rows="3"
           value={formData.description}
           onChange={handleChange}
           className="border-[#75777baa] border bg-[#E5EEFF] p-3 rounded-xl w-full overflow-auto"
